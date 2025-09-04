@@ -1,3 +1,6 @@
+#macos temp file
+.DS_Store
+
 # For local venv
 venv/
 
