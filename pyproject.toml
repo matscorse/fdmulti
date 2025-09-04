@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fdmulti"
+description = "Tool for processing and manupulating photographic images taken with the 'multi' burst record mode of the Sony Mavica Floppy Disk (FD) range of cameras"
+authors = [
+    {name = "matscorse", email = "155652843+matscorse@users.noreply.github.com"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">= 3.9.0"
+classifiers = ["Intended Audience :: Science/Research",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9"
+]
+keywords= ["Photos",
+    "Clips",
+    "Mavica",
+    "Sony",
+    "Floppy",
+    "FD",
+    "Burst"]
+dynamic = ["version", ]
+
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+documentation = [
+    "mkdocs",
+    "mkdocs-include-markdown-plugin",
+    "mkdocstrings[python]"
+]
+
+[tool.setuptools]
+packages = ["fdmulti"]
+
+[tool.setuptools.dynamic]
+version = {attr = "fdmulti.__version__"}
+
+[project.urls]
+Homepage = "https://github.com/matscorse/fdmulti"
+Documentation = "https://github.com/matscorse/fdmulti"
+Repository = "https://github.com/matscorse/fdmulti"
+Issues = "https://github.com/matscorse/fdmulti"
+
+[project.scripts]
+fdmulti = "fdmulti.cli:main"
