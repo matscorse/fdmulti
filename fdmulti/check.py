@@ -18,3 +18,10 @@ class CHECK:
         self.rotation = args.rotation
         self.arrangement = args.WxH
         self.input = args.input
+    
+    def get_arguments(self):
+        class temp: pass
+        temp.rotation = self.rotation
+        temp.arrangement = self.arrangement
+        temp.input = self.input
+        return temp

@@ -30,6 +30,7 @@ keywords= ["Photos",
 dynamic = ["version", ]
 
 dependencies = [
+    "pillow",
 ]
 
 [project.optional-dependencies]

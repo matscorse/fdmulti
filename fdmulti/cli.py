@@ -8,6 +8,7 @@ import argparse
 import sys
 from fdmulti import __version__
 from fdmulti.check import CHECK
+from fdmulti.process import PROCESS
 
 
 __DESCRIPTION__ = "Tool for processing and manupulating photographic images taken with the 'multi' burst record mode of the Sony Mavica Floppy Disk (FD) range of cameras"
@@ -37,7 +38,11 @@ def main():
 
     # Now kick off main
 
-    checked_args = CHECK(args)
+    checked = CHECK(args)
+    checked = checked.get_arguments()
+
+    data = PROCESS(args)
+    data.clip()
 
 
 
